@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/resistor_body"
+        android:layout_width="0dp"
+        android:layout_height="508dp"
+        android:layout_marginTop="-110dp"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/resistor1" />
+
+    <ImageView
+        android:id="@+id/band1"
+        android:layout_width="20dp"
+        android:layout_height="95.5dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginBottom="313dp"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/band2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/edit_text" />
+
+    <ImageView
+        android:id="@+id/band2"
+        android:layout_width="20dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="313dp"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/edit_text" />
+
+    <ImageView
+        android:id="@+id/band3"
+        android:layout_width="20dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginBottom="313dp"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/edit_text" />
+
+    <ImageView
+        android:id="@+id/tolerance"
+        android:layout_width="20dp"
+        android:layout_height="95.5dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="313dp"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/band3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/edit_text" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="650dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="508dp" />
+
+    <TextView
+        android:id="@+id/apptitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:foregroundTint="#FFFFFF"
+        android:shadowColor="#EEBB7B"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:text="RESISTOR CALCULATOR"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/band2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/band_spinner"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        android:contentDescription="Select Band"
+        app:layout_constraintBottom_toBottomOf="@+id/bands2_spinner"
+        app:layout_constraintEnd_toStartOf="@+id/bands2_spinner"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/resistor_body"
+        app:layout_constraintTop_toBottomOf="@+id/colorBand1"></Spinner>
+
+    <Spinner
+        android:id="@+id/bands2_spinner"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        android:contentDescription="Select Band"
+        app:layout_constraintEnd_toStartOf="@+id/bands3_spinner"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/band_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/colorBand2"></Spinner>
+
+    <Spinner
+        android:id="@+id/bands3_spinner"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        android:contentDescription="Select Band"
+        app:layout_constraintBottom_toBottomOf="@+id/bands2_spinner"
+        app:layout_constraintEnd_toStartOf="@+id/tolerance_spinner"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bands2_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/colorBand3"></Spinner>
+
+    <Spinner
+        android:id="@+id/tolerance_spinner"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:background="#FFFFFF"
+        android:contentDescription="Select Band"
+        app:layout_constraintBottom_toBottomOf="@+id/bands3_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bands3_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/colorTolerance"></Spinner>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="281dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="432dp" />
+
+    <TextView
+        android:id="@+id/colorBand1"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/colorBand2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <TextView
+        android:id="@+id/colorBand2"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/colorBand3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colorBand1"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <TextView
+        android:id="@+id/colorBand3"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/colorTolerance"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colorBand2"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <TextView
+        android:id="@+id/colorTolerance"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/colorBand3"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <TextView
+        android:id="@+id/labelBand1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BAND 1"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/colorBand1"
+        app:layout_constraintStart_toStartOf="@+id/colorBand1"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/labelBand2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BAND 2"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/colorBand2"
+        app:layout_constraintStart_toStartOf="@+id/colorBand2"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/labelBand3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BAND 3"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/colorBand3"
+        app:layout_constraintStart_toStartOf="@+id/colorBand3"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/labelTolerance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOLERANCE"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/colorTolerance"
+        app:layout_constraintStart_toStartOf="@+id/colorTolerance"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="252dp" />
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#EEBB7B"
+        android:text="CALCULATE"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="#EDBA7B"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="normal|bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#EDBA7B"
+        android:text="RESET"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalc"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#EEBB7B"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:text="RESISTOR VALUE:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
